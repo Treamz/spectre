@@ -1,0 +1,960 @@
+/*!
+ * project-name v0.0.1
+ * A description for your project.
+ * (c) 2019 YOUR NAME
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Faster+One");
+/**
+ * @section Base Styles
+ */
+/* line 4, src/sass/components/_base.scss */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #5B5B5B;
+}
+
+/* line 12, src/sass/components/_base.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #5B5B5B;
+}
+
+/* line 20, src/sass/components/_base.scss */
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #5B5B5B;
+}
+
+/* line 28, src/sass/components/_base.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #5B5B5B;
+}
+
+/* line 39, src/sass/components/_base.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 43, src/sass/components/_base.scss */
+h1 {
+  font-family: 'Faster One', cursive;
+  color: #000;
+  font-size: 48px;
+}
+
+/* line 49, src/sass/components/_base.scss */
+.container {
+  overflow-x: hidden;
+  color: #FFF;
+}
+
+/* line 53, src/sass/components/_base.scss */
+#page {
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+/* line 65, src/sass/components/_base.scss */
+.pane {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100vw;
+          flex: 0 0 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+}
+
+/* line 88, src/sass/components/_base.scss */
+nav {
+  padding: 30px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 102, src/sass/components/_base.scss */
+.nav__logo {
+  margin-bottom: 120px;
+}
+
+/* line 106, src/sass/components/_base.scss */
+.nav__side > ul.nav__ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 110, src/sass/components/_base.scss */
+.nav__side > ul.nav__ul > li.nav__ul_li {
+  list-style-type: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin: 22px 0;
+}
+
+/* line 116, src/sass/components/_base.scss */
+.nav__side > ul.nav__ul > li.nav__ul_li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+}
+
+/* line 124, src/sass/components/_base.scss */
+.pane__nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000;
+}
+
+/* line 131, src/sass/components/_base.scss */
+.pane__nav-link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 100%;
+          flex: 2 1 100%;
+  background-color: #222;
+  padding: 0 50px 0 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 145, src/sass/components/_base.scss */
+#nav-toggle {
+  display: none;
+}
+
+/* line 148, src/sass/components/_base.scss */
+.pane__nav-link:focus {
+  padding: 20px 50px 20px 150px;
+}
+
+/* line 152, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(1) {
+  background: linear-gradient(88.98deg, #F06259 0.22%, #BD2F42 101.05%);
+}
+
+/* line 155, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#F20FB8), to(#AF21FE));
+  background: linear-gradient(90deg, #F20FB8 0%, #AF21FE 100%);
+}
+
+/* line 158, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(3) {
+  background: linear-gradient(91.03deg, #7C2CFE -1.01%, #5A41FB 101.11%);
+}
+
+/* line 161, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(4) {
+  background: linear-gradient(90.72deg, #09CC9F 0.16%, #3B63FE 99.82%);
+}
+
+/* line 164, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(5) {
+  background: linear-gradient(90.67deg, #08772F 0.17%, #19C455 99.85%);
+}
+
+/* line 167, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(6) {
+  background: linear-gradient(269.1deg, #FFC015 0.2%, #FFFF00 98.18%);
+}
+
+/* line 170, src/sass/components/_base.scss */
+.pane__nav-link:nth-child(7) {
+  background: linear-gradient(90.73deg, #B25A01 0.18%, #FF8E1B 99.84%);
+}
+
+/* line 174, src/sass/components/_base.scss */
+.pane__nav-link span {
+  white-space: pre-wrap;
+  width: 190px;
+  text-align: left;
+  font-size: 24px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+/* line 186, src/sass/components/_base.scss */
+article {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 0 70px 0 70px;
+}
+
+/* line 192, src/sass/components/_base.scss */
+.about-text {
+  color: #000;
+  font-size: 18px;
+  white-space: normal;
+  width: 100%;
+}
+
+/* line 198, src/sass/components/_base.scss */
+.about-h1, .ai-h1, .webdev-h1, .erpcrm-h1,
+.cybesecurity-h1, .bigdata-h1, .uiux-h1,
+.mc-support-h1 {
+  margin-top: 65px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+/* line 207, src/sass/components/_base.scss */
+.ai-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 213, src/sass/components/_base.scss */
+.ai-h1::after {
+  content: '01';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #C23344;
+  right: 100px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 225, src/sass/components/_base.scss */
+.pane__img {
+  width: 300px;
+  text-align: center;
+}
+
+/* line 230, src/sass/components/_base.scss */
+.img-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+/* line 235, src/sass/components/_base.scss */
+.img-gallery > img {
+  margin: 0 5px;
+}
+
+/* line 238, src/sass/components/_base.scss */
+#about {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+}
+
+/* line 241, src/sass/components/_base.scss */
+#ai {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+  border-left: 1px solid #000000;
+  min-width: 500px;
+}
+
+/* line 247, src/sass/components/_base.scss */
+#about:after {
+  content: '';
+  position: absolute;
+  background: url("/svg/bg-cubes.svg") no-repeat;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+}
+
+/* line 256, src/sass/components/_base.scss */
+#webdev {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 263, src/sass/components/_base.scss */
+.webdev-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 269, src/sass/components/_base.scss */
+.webdev-h1::after {
+  content: '02';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #B520FA;
+  right: 75px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 282, src/sass/components/_base.scss */
+#erpcrm {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 288, src/sass/components/_base.scss */
+.erpcrm-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 294, src/sass/components/_base.scss */
+.erpcrm-h1::after {
+  content: '03';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #5F3FFD;
+  right: 100px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 306, src/sass/components/_base.scss */
+#cybesecurity {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 312, src/sass/components/_base.scss */
+.cybesecurity-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 318, src/sass/components/_base.scss */
+.cybesecurity-h1::after {
+  content: '04';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #376EF6;
+  right: 120px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 330, src/sass/components/_base.scss */
+#bigdata {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 336, src/sass/components/_base.scss */
+.bigdata-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 342, src/sass/components/_base.scss */
+.bigdata-h1::after {
+  content: '05';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #18BF53;
+  right: 95px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 354, src/sass/components/_base.scss */
+#uiux {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 360, src/sass/components/_base.scss */
+.uiux-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 366, src/sass/components/_base.scss */
+.uiux-h1::after {
+  content: '06';
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #18BF53;
+  right: 95px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 378, src/sass/components/_base.scss */
+#mc-support {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  min-width: 600px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.15%, #D2D2D2), color-stop(16.19%, #FFFFFF), to(rgba(247, 247, 247, 0)));
+  background: linear-gradient(180deg, #D2D2D2 -2.15%, #FFFFFF 16.19%, rgba(247, 247, 247, 0) 100%);
+  border-left: 1px solid #000000;
+}
+
+/* line 384, src/sass/components/_base.scss */
+.mc-support-h1 {
+  position: relative;
+  z-index: 1;
+  line-height: .9;
+  white-space: pre-wrap;
+}
+
+/* line 390, src/sass/components/_base.scss */
+.mc-support-h1::after {
+  content: '07';
+  position: absolute;
+  top: 35px;
+  font-family: Roboto;
+  font-size: 144px;
+  color: #18BF53;
+  right: 220px;
+  line-height: .5;
+  z-index: -1;
+}
+
+/* line 405, src/sass/components/_base.scss */
+section.contact-us {
+  background-color: #000;
+  height: 100%;
+  padding: 0 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+/* line 414, src/sass/components/_base.scss */
+section.contact-us h3 {
+  text-align: center;
+  font-family: Faster One;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* line 424, src/sass/components/_base.scss */
+section.contact-us span.subtitle {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+/* line 430, src/sass/components/_base.scss */
+section.contact-us input, section.contact-us textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #000;
+}
+
+/* line 444, src/sass/components/_base.scss */
+section.contact-us textarea {
+  height: 100px;
+}
+
+/* line 447, src/sass/components/_base.scss */
+section.contact-us form {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 451, src/sass/components/_base.scss */
+section.contact-us .submit-form {
+  width: auto;
+  background: #19C455;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  color: #000000;
+  border: 2px solid transparent;
+  margin: 0 auto;
+  padding: 10px 40px;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 466, src/sass/components/_base.scss */
+section.contact-us .submit-form:hover {
+  padding: 10px 60px;
+  border: 2px solid #19C455;
+  background: 000;
+  color: #fff;
+}
+
+/* line 472, src/sass/components/_base.scss */
+section.contact-us .contact-us__bottom {
+  margin-top: 60px;
+  margin-bottom: 44px;
+}
+
+/* line 476, src/sass/components/_base.scss */
+section.contact-us .location {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* line 484, src/sass/components/_base.scss */
+section.contact-us .year {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+/* line 498, src/sass/components/_base.scss */
+section.contact-us .socials-links {
+  position: absolute;
+  right: 150px;
+  bottom: 20px;
+}
+
+/* line 503, src/sass/components/_base.scss */
+section.contact-us .socials-links a {
+  margin: 0 10px;
+}
+
+/* line 510, src/sass/components/_base.scss */
+#slider {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+/* line 515, src/sass/components/_base.scss */
+.container-slider {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  color: #333;
+  background: #419be0;
+}
+
+/* line 524, src/sass/components/_base.scss */
+.slick-next, .slick-prev {
+  color: #000;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+}
+
+/* line 529, src/sass/components/_base.scss */
+.slick-next:before, .slick-prev:before {
+  color: #000;
+}
+
+/* line 532, src/sass/components/_base.scss */
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}
+
+/* line 538, src/sass/components/_base.scss */
+.slick-next {
+  right: -50px;
+}
+
+/* line 541, src/sass/components/_base.scss */
+.slick-prev {
+  left: -50px;
+}
+
+/* line 545, src/sass/components/_base.scss */
+.slick-next:before, .slick-prev:before {
+  opacity: .75;
+}
+
+/* line 549, src/sass/components/_base.scss */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+/* line 561, src/sass/components/_base.scss */
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(../img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  /* line 2, src/sass/components/_media.scss */
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  /* line 6, src/sass/components/_media.scss */
+  .nav__logo {
+    margin-bottom: 20px;
+  }
+  /* line 9, src/sass/components/_media.scss */
+  nav {
+    display: none;
+  }
+  /* line 12, src/sass/components/_media.scss */
+  nav.open {
+    display: block;
+    z-index: 111;
+  }
+  /* line 16, src/sass/components/_media.scss */
+  #nav-toggle {
+    display: block;
+    position: fixed;
+    z-index: 2222;
+    color: #fff;
+    top: 10px;
+    left: 3px;
+  }
+  /* line 23, src/sass/components/_media.scss */
+  #nav-toggle span {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  /* line 29, src/sass/components/_media.scss */
+  .nav__side > ul.nav__ul > li.nav__ul_li {
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+  }
+  /* line 32, src/sass/components/_media.scss */
+  #page {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: block;
+  }
+  /* line 38, src/sass/components/_media.scss */
+  .container {
+    overflow: auto;
+  }
+  /* line 41, src/sass/components/_media.scss */
+  .pane {
+    height: auto;
+    display: block;
+  }
+  /* line 45, src/sass/components/_media.scss */
+  .pane__nav-link {
+    padding: 5px;
+  }
+  /* line 47, src/sass/components/_media.scss */
+  .pane__nav-link .pane__img {
+    text-align: left;
+    padding-left: 10px;
+  }
+  /* line 52, src/sass/components/_media.scss */
+  .pane__nav {
+    position: relative;
+  }
+  /* line 55, src/sass/components/_media.scss */
+  article {
+    padding: 0 20px 0 20px;
+  }
+  /* line 58, src/sass/components/_media.scss */
+  .about-h1, .ai-h1 {
+    white-space: normal;
+    font-size: 24px;
+  }
+  /* line 63, src/sass/components/_media.scss */
+  .ai-h1 {
+    width: 69%;
+  }
+  /* line 66, src/sass/components/_media.scss */
+  .webdev-h1 {
+    font-size: 24px;
+    white-space: pre-wrap;
+    width: 69%;
+  }
+  /* line 71, src/sass/components/_media.scss */
+  .erpcrm-h1 {
+    font-size: 24px;
+  }
+  /* line 74, src/sass/components/_media.scss */
+  .cybesecurity-h1, .bigdata-h1, .uiux-h1, .mc-support-h1 {
+    font-size: 24px;
+  }
+  /* line 77, src/sass/components/_media.scss */
+  #ai {
+    min-width: auto;
+    background: #fff;
+  }
+  /* line 82, src/sass/components/_media.scss */
+  .ai-h1::after {
+    content: '01';
+    position: absolute;
+    top: 10px;
+    font-family: Roboto;
+    font-size: 44px;
+    color: #C23344;
+    right: 0;
+    line-height: .5;
+    z-index: -1;
+  }
+  /* line 94, src/sass/components/_media.scss */
+  .cybesecurity-h1::after, .bigdata-h1::after, .uiux-h1::after, .erpcrm-h1::after, .webdev-h1::after, .mc-support-h1::after {
+    position: relative;
+    font-size: 44px;
+    top: -5px;
+    right: auto;
+    padding-left: 5px;
+  }
+  /* line 102, src/sass/components/_media.scss */
+  #about:after {
+    left: -150px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    display: none;
+  }
+  /* line 107, src/sass/components/_media.scss */
+  .about-text {
+    font-size: 12px;
+  }
+  /* line 110, src/sass/components/_media.scss */
+  .img-gallery {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  /* line 114, src/sass/components/_media.scss */
+  #webdev, #erpcrm, #cybesecurity, #bigdata, #uiux, #mc-support, #ai {
+    min-width: auto;
+    border: none;
+    background: #fff;
+  }
+  /* line 120, src/sass/components/_media.scss */
+  section.contact-us {
+    padding: 10px;
+  }
+  /* line 122, src/sass/components/_media.scss */
+  section.contact-us h3 {
+    font-size: 24px;
+  }
+  /* line 125, src/sass/components/_media.scss */
+  section.contact-us span.subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  /* line 130, src/sass/components/_media.scss */
+  section.contact-us .contact-us__bottom {
+    margin: 10px 0;
+  }
+  /* line 133, src/sass/components/_media.scss */
+  section.contact-us .location {
+    font-size: 12px;
+    margin-bottom: 100px;
+  }
+  /* line 137, src/sass/components/_media.scss */
+  section.contact-us .socials-links {
+    right: auto;
+    bottom: 50px;
+  }
+  /* line 143, src/sass/components/_media.scss */
+  .slick-next {
+    right: -40px;
+  }
+  /* line 146, src/sass/components/_media.scss */
+  .slick-prev {
+    left: -40px;
+  }
+  /* line 149, src/sass/components/_media.scss */
+  .pane__nav-link span {
+    font-size: 16px;
+  }
+  /* line 152, src/sass/components/_media.scss */
+  .img-gallery > img {
+    width: 44%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
