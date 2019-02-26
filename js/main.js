@@ -12,7 +12,7 @@ $(window).on('load', (function() { // makes sure the whole site is loaded
   $('body').delay(350).css({'overflow':'visible'});
 }))
 
-
+var isAnch = false;
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (!isMobile) {
   horizontal();
@@ -21,7 +21,13 @@ if (!isMobile) {
     // Scroll
     var pos = $(id).offset().left;
     console.log(pos);
-    $(window).scrollTop(pos - 300);  
+    isAnch = true;
+   // $(window).scrollTop(pos - 300); 
+    // var container = document.getElementsByClassName('container')[0];
+    //$(window).scrollTop(1);
+    // window.pageYOffset
+    $('body, html').animate({scrollTop: (pos -300)}, 800);
+
   }
   
   $("#pane_nav > a").click((function(e) { 
@@ -46,6 +52,7 @@ function horizontal() {
   var dummy_x = null;
 
 window.onscroll = function () {
+  console.log(window.pageYOffset);
   // Horizontal Scroll.
   var y = container.getBoundingClientRect().top;
   page.scrollLeft = -y;
@@ -56,7 +63,14 @@ window.onscroll = function () {
     window.scrollTo(0, diff);
     console.log(diff);
   }
-  else if (window.pageYOffset == 0) {
+  else if (isAnch == true) {
+    //window.scrollTo(0, 0);
+    //window.pageYOffset = 1;
+    console.log(isAnch);
+    isAnch = false;
+  }
+  else if (window.pageYOffset == 0) 
+  {
     window.scrollTo(0, dummy_x+ 10);
     console.log('reset', dummy_x);
   }
@@ -70,7 +84,7 @@ resize();
 function resize() {
   var w = page.scrollWidth-window.innerWidth+window.innerHeight;
   document.body.style.height = w + 'px';
-  
+  console.log('Reset',last_pane.getBoundingClientRect());
   dummy_x = last_pane.getBoundingClientRect().left+window.pageYOffset;
 }
 
