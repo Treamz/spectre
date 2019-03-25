@@ -116,7 +116,7 @@ presentLoader.innerHTML = '<img src="svg/loaderPresent.svg" alt="Loading..." id=
 
 const presentFirst = document.getElementById('web_1');
 const presentSecond = document.getElementById('web_2');
-const presentThird = document.getElementById('web_3');
+const presentFirstBlockchain = document.getElementById('blockchain_1');
 presentFirst.addEventListener('click', () => {
 	createModal('img/web_presentationfull_1.png');
 	presentLoader.classList.add('open');
@@ -131,11 +131,10 @@ presentSecond.addEventListener('click', () => {
 
 });
 
-presentThird.addEventListener('click', () => {
-	createModal('img/web_presentationfull_3.png');
+presentFirstBlockchain.addEventListener('click', () => {
+	createModal('img/blockchain_presentationfull_1.png');
 	presentLoader.classList.add('open');
-	presentThird.parentElement.appendChild(presentLoader);
-
+	presentFirstBlockchain.parentElement.appendChild(presentLoader);
 });
 
 
