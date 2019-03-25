@@ -1,0 +1,43 @@
+
+.nav__logo svg {
+  width:109px;
+  height:86px;
+}
+.logo-text  {
+  position: relative;
+}
+.logo-text:before {
+  position: absolute;
+    content: 'Part of Zeus Group';
+    font-size: 9px;
+    text-align: left;
+    bottom: -11px;
+    width: 100%;
+}
+#stop1 {
+    animation: change-color1 2s ease-in-out infinite alternate;
+}
+#stop2 {
+    animation: change-color2 2s ease-in-out infinite alternate;
+}
+
+  @keyframes change-color1 {
+    0% {stop-color: #FA4D43;}
+    100% {stop-color:#636AFB;}
+  }
+  @keyframes change-color2 {
+    0% {stop-color: #636AFB;}
+    100% {stop-color: #12C6C5;}
+  }
+
+
+  .nav-burger {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+   }

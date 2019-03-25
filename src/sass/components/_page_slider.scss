@@ -1,0 +1,106 @@
+// Slider
+#slider-page {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+#slider-page .container-slider {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 46vw;
+    color: #333;
+    // background: #419be0;
+}
+#slider-page .slick-next, .slick-prev {
+   color: #000;
+   transform: scale(3);
+   background: rgba(255,255,255, .8);
+    border-radius: 50%;
+}
+
+#slider-page .slick-next:before, .slick-prev:before {
+   color: #000;
+   z-index: 2;
+   line-height: .1;
+   width: 20px;
+   height: 20px;
+   display: block;
+}
+
+#slider-page .slick-prev:before
+{
+   content: '';
+   background-image: url("data:image/svg+xml,%3Csvg width='21' height='38' viewBox='0 0 21 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.5 1L2 19L19.5 36.5' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+   background-size: contain;
+   background-position: 49%;
+    background-repeat: no-repeat;
+    height: 12px;
+   
+}
+#slider-page .slick-next:before
+{
+   content: '';
+   background-image: url("data:image/svg+xml,%3Csvg width='21' height='38' viewBox='0 0 21 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.5 1L2 19L19.5 36.5' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+   background-size: contain;
+   background-position: 49%;
+    background-repeat: no-repeat;
+    height: 12px;
+   transform: scale(-1, 1);
+}
+
+.slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#slider-page .slick-slide {
+   text-align: center;
+   color: #419be0;
+   background: white;
+}
+
+#slider-page .slick-next {
+    right: 50px;
+    z-index: 1;
+}
+#slider-page .slick-prev {
+    left: 50px;
+    z-index: 1;
+}
+
+#slider-page .slick-next:before, .slick-prev:before {
+opacity: .75;
+}
+
+
+#slider-page .slick-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 480px;
+   
+}
+
+#slider-page .slick-slide {
+    position: relative;
+}
+#slider-page .slider__title {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0,0,0,.5);
+    transition: all .4s ease-in-out;
+}
+#slider-page .slider__title:hover {
+    opacity: 1;
+}
